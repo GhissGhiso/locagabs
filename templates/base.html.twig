@@ -1,19 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site d'annonces immobilères au GABON. Nous sommes axés aussi sur la vente des terrains. ">
+        <meta name="keywords" content="location, vente, annonces, chambres, appartements, maisons, studio, terrains, gabon">
+        <title>{% block title %}Location et vente immobilières{% endblock %}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="{{asset('assets/images/locagabs.png')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/css/home/home.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/home/gabonsvg.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/home/accordeon.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            {# {{ encore_entry_link_tags('app') }} #}
         {% endblock %}
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {# {{ encore_entry_script_tags('app') }} #}
+
+            <script src="{{asset('assets/js/home/polyfill.js')}}" defer></script>
+            <script src="{{asset('assets/js/home/gabonsvg.js')}}" defer></script>
+            <script src="{{asset('assets/js/home/selectprovil.js')}}" defer></script>
+            <script src="{{asset('assets/js/home/accordeon.js')}}" defer></script>
+            <script src="{{asset('assets/js/home/tabhome.js')}}" defer></script>
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="container">
+
+            {% block header %}
+                {% include "_partials/_header.html.twig" %}
+            {% endblock %}
+            
+            {% include "_partials/_nav.html.twig" %}
+
+            <main>
+                {% block body %}{% endblock %}
+            </main>
+        </div>
+
+        {% include "_partials/_footer.html.twig" %}
     </body>
 </html>

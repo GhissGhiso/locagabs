@@ -1,0 +1,47 @@
+#map{
+    overflow: hidden;
+    margin: auto;
+    width: 70%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.map-image{
+    padding: 4px;
+    vertical-align: middle;
+}
+
+.map-image path{
+    fill:  #a4ced2;
+    stroke: #ffffff;
+    stroke-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.map-image .is-active path{
+    fill:  #3538d2;
+}
+.map-list {
+    padding: 10%;
+    vertical-align: middle;
+}
+
+.map-list ul
+{
+    font-size: 1.2em;
+    list-style-type: none;
+}
+
+.map-list a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.map-list a.is-active{
+    color: #3538d2;
+    font-weight: bold;
+    text-decoration: underline;
+}

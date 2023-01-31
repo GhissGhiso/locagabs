@@ -1,0 +1,75 @@
+.div-tabchoice h3{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.tabchoice
+{
+  display: flex;
+  justify-content: center;
+}
+
+/* .tabcontainer{width: 90%;} */
+
+.labelAccordion
+{
+  display: block;
+  font-size: 1.5em;
+  background: #3333ff;
+  padding: 10px 25px;
+  /*font-weight: bold;*/
+  border: .5px solid #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.labelAccordion:hover
+{
+  opacity: .8;
+}
+
+.labelAccordion::after
+{
+  /*content: "\002B";*/
+  content: "\25BE";
+  font-size: 1.5rem;
+  float: right;
+  transition: transform 0.2s ease-in-out;
+}
+
+.labelAccordion.active::after
+{
+  /*content: "\2212";*/
+  transform: rotate(180deg);
+}
+
+.contentBox1, .contentBox2, .contentBox3, .contentBox4, .contentBox5
+{
+  margin: 0 auto;
+  background: #ddd;
+  padding-left: 10px;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+#title1:checked + .contentBox1, #title2:checked + .contentBox2,
+#title3:checked + .contentBox3, #title4:checked + .contentBox4,
+#title5:checked + .contentBox5
+{
+  padding: 20px 10px 20px 10px;
+  height: auto;
+}
+
+input{display: none;}
+
+.tabchoice i
+{
+  margin-right: 5px;
+}
