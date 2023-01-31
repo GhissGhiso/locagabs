@@ -65,19 +65,19 @@
     <div class="div-choiceprovil">
         <p id="choicespeak">Fais ton filtre si t'en as envie</p>
         <div id="div-choice">
-            <div class="div-choiceradio div1">
+            <div class="div-choiceradio">
                 <input type="radio" name="choice" id="all" class="radiochoice">
                 <label for="all"class="labelradio">Tous</label>
             </div>
-            <div class="div-choiceradio div2">
+            <div class="div-choiceradio">
                 <input type="radio" name="choice" id="sale" class="radiochoice">
                 <label for="sale"class="labelradio">Vente</label>
             </div>
-            <div class="div-choiceradio div3">
+            <div class="div-choiceradio">
                 <input type="radio" name="choice" id="rental" class="radiochoice">
                 <label for="rental"class="labelradio">Location</label>
             </div>
-            <div class="div-choiceradio div4">
+            <div class="div-choiceradio">
                 <input type="radio" name="choice" id="furnished" class="radiochoice">
                 <label for="furnished"class="labelradio">Meublée</label>
             </div>
@@ -99,7 +99,7 @@
         <h3>Tiens, jette un coup d'oeil aux annonces de la semaine (grâce aux filtres juste au-dessus)</h3>
         <div class="tabchoice">
             <div class="tabcontainer">
-                <div class="chambres" style="display:none">
+                <div class="chambres divaccordeons">
                     <label for="title1" class="title1 labelAccordion"><i class="fas fa-bed"></i>  Chambres</label>
                     <input type="checkbox" name="" id="title1">
                     <p class="contentBox1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -109,7 +109,7 @@
                     </p>
                 </div>
         
-                <div class="studios" style="display:none">
+                <div class="studios divaccordeons">
                     <label for="title2" class="title2 labelAccordion"><i class="fas fa-house-user"></i>  Studios</label>
                     <input type="checkbox" name="" id="title2">
                     <p class="contentBox2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -119,7 +119,7 @@
                     </p>
                 </div>
         
-                <div class="maisons" style="display:none">
+                <div class="maisons divaccordeons">
                     <label for="title3" class="title3 labelAccordion"><i class="fas fa-home"></i>  Maisons</label>
                     <input type="checkbox" name="" id="title3">
                     <p class="contentBox3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -139,7 +139,7 @@
                     </p>
                 </div>
         
-                <div class="appartements" style="display:none">
+                <div class="appartements divaccordeons">
                     <label for="title4" class="title4 labelAccordion"><i class="fas fa-building"></i>  Appartements</label>
                     <input type="checkbox" name="" id="title4">
                     <p class="contentBox4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -153,7 +153,7 @@
                     </p>
                 </div>
 
-                <div class="terrains" style="display:none">
+                <div class="terrains divaccordeons">
                     <label for="title5" class="title5 labelAccordion"><img src="{{asset('assets/images/shovel.svg')}}" alt="">  Terrains</label>
                     <input type="checkbox" name="" id="title5">
                     <p class="contentBox5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
